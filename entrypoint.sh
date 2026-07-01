@@ -1,7 +1,7 @@
 #!/bin/bash
 
 USER_NAME="${SSH_USER:-j1btnl}"
-USER_PASS="${SSH_PASSWORD:-087818"
+USER_PASS="${SSH_PASSWORD:-087818}"
 MAIN_PORT="${PORT:-8080}"
 
 echo "[*] Mengonfigurasi User SSH..."
