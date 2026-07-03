@@ -5,7 +5,17 @@ USER_PASS="${SSH_PASSWORD:-123456}"
 MAIN_PORT="${PORT:-8080}"
 
 # 1. Mengonfigurasi Server Message
-MESSAGE="${SERVER_MESSAGE:-Selamat datang di Server SSH J1BTNL!}"
+MESSAGE="${SERVER_MESSAGE:-<p style="text-align:center">
+<font color='#FF0059'>▬</font><font color='#F1006F'>▬</font><font color='#E30085'>▬</font><font color='#>
+<font color="#F5FE00"><b> --- ۩ PREMIUM SSH ۩ --- </b></font><br>
+<font color='red'>!!! TERM OF SERVICE !!!</font><br>
+<font color='#20CDCC'><b>         NO SPAM           </b></font><br>
+<font color='#10C7E5'><b>         NO DDOS           </b></font><br>
+<font color='#00C1FF'><b>  NO HACKING AND CARDING   </b></font><br>
+<font color="#E51369"><b>    Multi Login BANNED!!     </b></font><br>
+<font color='red'><b> Server VPS Auto Reboot On 05.00 GMT +7 </b></font><br>
+<font color="#556B2F"><b>JIBSZZ SERVER</br></font><br>
+<font color='#FF0059'>▬</font><font color='#F1006F'>▬</font><font color='#E30085'>▬</font><font color='#>}"
 
 echo "[*] Mengonfigurasi Server Message..."
 # Menyimpan pesan untuk Banner (sebelum login)
