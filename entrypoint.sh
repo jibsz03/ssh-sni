@@ -8,17 +8,21 @@ MAIN_PORT="${PORT:-8080}"
 echo "[*] Mengonfigurasi Server Message (Banner & MOTD)..."
 # 1. Menulis pesan HTML menggunakan EOF agar aman dari tanda kutip
 cat << 'EOF' > /etc/issue.net
-<p style="text-align:center">
-<font color='#FF0059'>▬</font><font color='#F1006F'>▬</font><font color='#E30085'>▬</font>
-<font color="#F5FE00"><b> --- ۩ PREMIUM SSH ۩ --- </b></font><br>
-<font color='red'>!!! TERM OF SERVICE !!!</font><br>
-<font color='#20CDCC'><b>         NO SPAM           </b></font><br>
-<font color='#10C7E5'><b>         NO DDOS           </b></font><br>
-<font color='#00C1FF'><b>  NO HACKING AND CARDING   </b></font><br>
-<font color="#E51369"><b>    Multi Login BANNED!!     </b></font><br>
-<font color='red'><b> Server VPS Auto Reboot On 05.00 GMT +7 </b></font><br>
-<font color="#556B2F"><b>JIBSZZ SERVER</b></font><br>
-<font color='#FF0059'>▬</font><font color='#F1006F'>▬</font><font color='#E30085'>▬</font>
+<p align="center">
+<font color='red'>◢◣◥◤◢◣◥◤◢◣◥◤◢◣◥◤◢◣◥◤◢◣◥◤◢◣</font><br>
+<font color="#00C1FF"><b>  ☣️ JIBSZZ SSH SERVER ☣️  </b></font><br>
+<font color='red'>◥◤◢◣◥◤◢◣◥◤◢◣◥◤◢◣◥◤◢◣◥◤◢◣◥◤</font><br>
+<br>
+<font color="#FFFF00"><b>▓▒░ CRITICAL RULES ░▒▓</b></font><br>
+<font color="#FFFFFF">⚠️ <b>NO</b> SPAM / DDOS / TORRENT</font><br>
+<font color="#FFFFFF">⚠️ <b>NO</b> CARDING & HACKING ACTIVITES</font><br>
+<br>
+<font color="#20CDCC"><b>[ SYSTEM STATUS ]</b></font><br>
+<font color="#FFFFFF">Server Normal</font><br>
+<br>
+<font color='red'>◢◣◥◤◢◣◥◤◢◣◥◤◢◣◥◤◢◣◥◤◢◣◥◤◢◣</font><br>
+<font color="#FFFF00"><b>  DO WITH YOUR OWN RISK!  </b></font><br>
+<font color='red'>◥◤◢◣◥◤◢◣◥◤◢◣◥◤◢◣◥◤◢◣◥◤◢◣◥◤</font>
 </p>
 EOF
 
