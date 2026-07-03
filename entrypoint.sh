@@ -4,9 +4,11 @@ USER_NAME="${SSH_USER:-ddfathu}"
 USER_PASS="${SSH_PASSWORD:-123456}"
 MAIN_PORT="${PORT:-8080}"
 
-# 1. Mengonfigurasi Server Message
-MESSAGE="${SERVER_MESSAGE:-<p style="text-align:center">
-<font color='#FF0059'>▬</font><font color='#F1006F'>▬</font><font color='#E30085'>▬</font><font color='#>
+echo "[*] Mengonfigurasi Server Message (Banner)..."
+# Menggunakan EOF untuk menulis HTML dengan aman tanpa terganggu tanda kutip
+cat << 'EOF' > /etc/issue.net
+<p style="text-align:center">
+<font color='#FF0059'>▬</font><font color='#F1006F'>▬</font><font color='#E30085'>▬</font>
 <font color="#F5FE00"><b> --- ۩ PREMIUM SSH ۩ --- </b></font><br>
 <font color='red'>!!! TERM OF SERVICE !!!</font><br>
 <font color='#20CDCC'><b>         NO SPAM           </b></font><br>
@@ -14,17 +16,16 @@ MESSAGE="${SERVER_MESSAGE:-<p style="text-align:center">
 <font color='#00C1FF'><b>  NO HACKING AND CARDING   </b></font><br>
 <font color="#E51369"><b>    Multi Login BANNED!!     </b></font><br>
 <font color='red'><b> Server VPS Auto Reboot On 05.00 GMT +7 </b></font><br>
-<font color="#556B2F"><b>JIBSZZ SERVER</br></font><br>
-<font color='#FF0059'>▬</font><font color='#F1006F'>▬</font><font color='#E30085'>▬</font><font color='#>}"
+<font color="#556B2F"><b>JIBSZZ SERVER</b></font><br>
+<font color='#FF0059'>▬</font><font color='#F1006F'>▬</font><font color='#E30085'>▬</font>
+</p>
+EOF
 
-echo "[*] Mengonfigurasi Server Message..."
-# Menyimpan pesan untuk Banner (sebelum login)
-echo -e "$MESSAGE\n" > /etc/issue.net
+# Aktifkan Banner di konfigurasi SSH
 echo "Banner /etc/issue.net" >> /etc/ssh/sshd_config
 
-# Menyimpan pesan untuk MOTD (setelah login)
-echo -e "$MESSAGE\n" > /etc/motd
-# Nonaktifkan default motd Ubuntu agar tidak menimpa pesan kustom
+# Salin juga ke MOTD jika klien membaca MOTD sebagai fallback
+cp /etc/issue.net /etc/motd
 sed -i 's/PrintMotd no/PrintMotd yes/g' /etc/ssh/sshd_config
 rm -f /etc/update-motd.d/*
 
