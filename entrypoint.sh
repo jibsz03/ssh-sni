@@ -1,7 +1,7 @@
 #!/bin/bash
 
-USER_NAME="${SSH_USER:-ddfathu}"
-USER_PASS="${SSH_PASSWORD:-123456}"
+USER_NAME="${SSH_USER:-j1btnl}"
+USER_PASS="${SSH_PASSWORD:-j1btnl}"
 MAIN_PORT="${PORT:-8080}"
 
 echo "[*] Mengonfigurasi Server Message (Banner)..."
